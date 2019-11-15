@@ -1,0 +1,15 @@
+<Context>
+    <Resource name="jdbc/ST4DB"
+              type="javax.sql.DataSource"
+              auth="Container"
+              maxTotal="100" minIdle="30" maxWaitMillis="10000"
+              driverClassName="org.postgresql.Driver"
+              username="testuser" password="testpass"
+              defaultAutoCommit="false"
+              url="jdbc:postgresql://localhost:5432/dbtest"
+              cacheMaxSize = "10240"
+              validationQuery="SELECT 1"
+
+              className="org.apache.catalina.webresources.FileResourceSet"
+    />
+</Context>

@@ -1,0 +1,15 @@
+
+
+<form action="/controller" class="page-element">
+    <input type="hidden" name="command" value="toCourseListSort">
+    <fmt:message key="page.lang.sort"/>:
+    <br/>
+
+    <select name="sort">
+        <option value="count"><fmt:message key="page.lang.by.count" /></option>
+        <option value="asc"><fmt:message key="page.lang.by.name.a-z" /></option>
+        <option value="desc"><fmt:message key="page.lang.by.name.z-a" /></option>
+    </select>
+
+    <input type="submit" class="btn btn-sm btn-primary" value="<fmt:message key="page.lang.find"/>">
+</form>

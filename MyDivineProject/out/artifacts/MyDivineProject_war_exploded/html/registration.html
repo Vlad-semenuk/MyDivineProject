@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+
+    <script type="text / javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+
+    </script>
+
+    <link rel="stylesheet" href="/style/bootstrap.css">
+    <link rel="stylesheet" href="/style/common.css">
+</head>
+<body>
+<form action="/controller" method="post" id="form" onsubmit="function checkPass(form) {
+
+    let password = form.password.value;
+    let confirmPassword = form.confirmPassword.value;
+    if (password !== confirmPassword) {
+        alert('Passwords do not match!!');
+        return false;
+        }
+    else {
+        return true;
+    }
+}
+return checkPass(document.getElementById('form'))">
+    <table class="auth-reg-table" align="center">
+        <h3 align="center">Registration</h3>
+        <input type="hidden" name="command" value="reg">
+        <tr>
+            <td>Login</td>
+        </tr>
+        <tr>
+            <td><label>
+                <input name="login" required minlength="4" maxlength="16">
+            </label></td>
+        </tr>
+        <tr>
+            <td>Full Name</td>
+        </tr>
+        <tr>
+            <td><label>
+                <input name="fullName" required minlength="2" maxlength="16">
+            </label></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+        </tr>
+        <tr>
+            <td><label>
+                <input type="password" name="password" id="password" required minlength="4" maxlength="16">
+            </label></td>
+        </tr>
+        <tr>
+            <td>Confirm password</td>
+        </tr>
+        <tr>
+            <td><label>
+                <input type="password" name="confirmPassword" id="confirmPassword" required minlength="4"
+                       maxlength="16">
+            </label></td>
+        </tr>
+        <tr>
+            <td><input type='submit' id="btn" class="btn btn-sm btn-primary" value="Register" >
+                <a href="aut" class="btn btn-sm btn-primary">Back</a>
+
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<c:if test="${not empty sessionScope.user}">
+    <li><a href="/controller?command=toCourseList">
+        <fmt:message key="page.lang.course.list"/></a></li>
+</c:if>
